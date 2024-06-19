@@ -1,0 +1,138 @@
+@import "../variables.scss";
+
+.section-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    height: 100vh;
+    background-color: $color-secondary;
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
+
+    animation-timeline: --cards;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 80%;
+        }
+
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+
+    }
+
+    .title-display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+
+
+        h3 {
+            font-size: 2.9rem;
+            font-weight: 700;
+            color: #333;
+            font-family: $font-primary;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            width: 70%;
+            color: #333;
+            font-family: $font-secondary;
+        }
+    }
+
+    .info-display {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        width: 100%;
+        margin-top: 4rem;
+
+        .info-chat{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            width: 30rem;
+            height: auto;
+            text-align: start;
+
+            h6{
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: #333;
+                font-family: $font-primary;
+                margin-bottom: 1rem;
+                margin-top: 2rem;
+            
+            }
+           
+            p {
+                font-size: 0.9rem;
+                color: #333;
+                font-family: $font-secondary;
+            }
+
+            .display-botones{
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                margin-top: 1rem;
+                gap: 1rem;
+                margin-top: 7rem;
+
+                .btn-1{
+                    background-color: $color-primary;
+                    padding:15px;
+                    color: $color-secondary;
+                    text-decoration: none;
+                    font-family: $font-secondary;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    //hace un hover que se note apenas el cambio al color de fondo
+
+                    &:hover{
+                        background-color: #181818;
+                    }
+                   
+                }
+
+                .btn-2{
+                    background-color: $color-secondary;
+                    padding:15px;
+                    color: $color-primary;
+                    text-decoration: none;
+                    font-family: $font-secondary;
+                    border-radius: 5px;
+                    border: solid 1px #e0dede;
+                    cursor: pointer;
+
+                    //hace un hover que se note apenas
+
+                    &:hover{
+                        background-color: #f0f0f0;
+                    }
+                }
+            }
+
+        }
+        
+    }
+
+}

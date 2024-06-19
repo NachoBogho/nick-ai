@@ -1,0 +1,187 @@
+  version: "2.0"
+  rules:
+  
+  - rule: Responder usando OpenAI
+    steps:
+    - intent: nlu_fallback
+    - action: action_openai_response
+
+  - rule: Greet user
+    steps:
+    - intent: greet
+    - action: utter_greet
+
+  - rule: Respond to how it works
+    steps:
+    - intent: ask_how_it_works
+    - action: action_openai_response
+
+  - rule: Respond to technologies used
+    steps:
+    - intent: ask_technologies_used
+    - action: action_openai_response
+
+  - rule: Respond to CRM integration
+    steps:
+    - intent: ask_crm_integration
+    - action: action_openai_response
+
+  - rule: Respond to programming languages
+    steps:
+    - intent: ask_programming_languages
+    - action: action_openai_response
+
+  - rule: Respond to security
+    steps:
+    - intent: ask_security
+    - action: action_openai_response
+
+  - rule: Respond to multilingual support
+    steps:
+    - intent: ask_multilingual_support
+    - action: action_openai_response
+
+  - rule: Respond to platform specific solutions
+    steps:
+    - intent: ask_platform_specific_solutions
+    - action: action_openai_response
+
+  - rule: Respond to training
+    steps:
+    - intent: ask_training
+    - action: action_openai_response
+
+  - rule: Respond to ML algorithms
+    steps:
+    - intent: ask_ml_algorithms
+    - action: action_openai_response
+
+  - rule: Respond to customization
+    steps:
+    - intent: ask_customization
+    - action: action_openai_response
+
+  - rule: Respond to app integration
+    steps:
+    - intent: ask_app_integration
+    - action: action_openai_response
+
+  - rule: Respond to subscription
+    steps:
+    - intent: ask_subscription
+    - action: action_openai_response
+
+  - rule: Respond to maintenance costs
+    steps:
+    - intent: ask_maintenance_costs
+    - action: action_openai_response
+
+  - rule: Respond to free trials
+    steps:
+    - intent: ask_free_trials
+    - action: action_openai_response
+
+  - rule: Respond to competitive advantages
+    steps:
+    - intent: ask_competitive_advantages
+    - action: action_openai_response
+
+  - rule: Respond to support after implementation
+    steps:
+    - intent: ask_support_after_implementation
+    - action: action_openai_response
+
+  - rule: Respond to 24/7 support
+    steps:
+    - intent: ask_24_7_support
+    - action: action_openai_response
+
+  - rule: Respond to complex questions
+    steps:
+    - intent: ask_complex_questions
+    - action: action_openai_response
+
+  - rule: Respond to scalability
+    steps:
+    - intent: ask_scalability
+    - action: action_openai_response
+
+  - rule: Respond to concurrent conversations
+    steps:
+    - intent: ask_concurrent_conversations
+    - action: action_openai_response
+
+  - rule: Respond to benefits
+    steps:
+    - intent: ask_benefits
+    - action: action_openai_response
+
+  - rule: Respond to success measurement
+    steps:
+    - intent: ask_success_measurement
+    - action: action_openai_response
+
+  - rule: Respond to performance analysis
+    steps:
+    - intent: ask_performance_analysis
+    - action: action_openai_response
+
+  - rule: Respond to customer experience
+    steps:
+    - intent: ask_customer_experience
+    - action: action_openai_response
+
+  - rule: Respond to response quality
+    steps:
+    - intent: ask_response_quality
+    - action: action_openai_response
+
+  - rule: Respond to chatbot cost
+    steps:
+    - intent: ask_chatbot_cost
+    - action: action_openai_response
+
+  - rule: Respond to pricing plans
+    steps:
+    - intent: ask_pricing_plans
+    - action: action_openai_response
+
+  - rule: Respond to startup discounts
+    steps:
+    - intent: ask_startup_discounts
+    - action: action_openai_response
+
+  - rule: Respond to cost calculation
+    steps:
+    - intent: ask_cost_calculation
+    - action: action_openai_response
+
+  - rule: Respond to included services
+    steps:
+    - intent: ask_included_services
+    - action: action_openai_response
+
+  - rule: Respond to custom quote
+    steps:
+    - intent: ask_custom_quote
+    - action: action_openai_response
+
+  - rule: Respond to special offers
+    steps:
+    - intent: ask_special_offers
+    - action: action_openai_response
+
+  - rule: Respond to company info
+    steps:
+    - intent: ask_company_info
+    - action: action_openai_response
+
+  - rule: Respond to business duration
+    steps:
+    - intent: ask_business_duration
+    - action: action_openai_response
+
+  - rule: Respond to location
+    steps:
+    - intent: ask_location
+    - action: action_openai_response

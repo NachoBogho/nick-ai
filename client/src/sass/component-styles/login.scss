@@ -1,0 +1,102 @@
+@import "../variables.scss";
+
+.display-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    background-color: #ececec;
+    gap: 1rem;
+    //hace que la animacion salga de la derecha
+    animation-timeline: --cards;
+    animation-name: myAnim;
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
+    
+    animation-range: entry 35% cover 45%;
+    animation-fill-mode: both;
+
+
+
+    @keyframes myAnim {
+        0% {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+    }
+
+    h3{
+        font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            font-family: $font-primary;
+    }
+    p{
+        font-size: 1rem;
+        color: #333;
+        font-family: $font-secondary;
+        width: 40%;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        span{
+            font-size: 0.7rem;
+        }
+        
+        a{
+            font-size: 0.7rem;
+            text-decoration: none;
+            color: $color-primary;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .label-display{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        
+        input{
+            width: 20rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #333;
+            font-size: 0.9rem;
+            font-family: $font-secondary;
+        }
+
+        .btn-1{
+            background-color: $color-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            padding: 0.7rem;
+            color: $color-secondary;
+            text-decoration: none;
+            font-family: $font-secondary;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9rem;
+
+
+            &:hover{
+                background-color: #181818;
+            }
+        }
+    }
+}

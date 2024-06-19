@@ -1,0 +1,185 @@
+version: "2.0"
+intents:
+  - ask_how_it_works
+  - ask_technologies_used
+  - ask_crm_integration
+  - ask_programming_languages
+  - ask_security
+  - ask_multilingual_support
+  - ask_platform_specific_solutions
+  - ask_training
+  - ask_ml_algorithms
+  - ask_customization
+  - ask_app_integration
+  - ask_subscription
+  - ask_maintenance_costs
+  - ask_free_trials
+  - ask_competitive_advantages
+  - ask_support_after_implementation
+  - ask_24_7_support
+  - ask_complex_questions
+  - ask_scalability
+  - ask_concurrent_conversations
+  - ask_benefits
+  - ask_success_measurement
+  - ask_performance_analysis
+  - ask_customer_experience
+  - ask_response_quality
+  - ask_chatbot_cost
+  - ask_pricing_plans
+  - ask_startup_discounts
+  - ask_cost_calculation
+  - ask_included_services
+  - ask_custom_quote
+  - ask_special_offers
+  - ask_company_info
+  - ask_business_duration
+  - ask_location
+
+responses:
+  utter_greet:
+    - text: "Hola soy el asistente virtual de NexAI🤖🚀. ¿En qué puedo ayudarte?"
+    - text: "¡Hola! Soy el chatbot de NexAI. ¿Cómo puedo asistirte hoy?"
+
+  utter_how_it_works:
+    - text: "Nuestro chatbot basado en AI funciona utilizando algoritmos avanzados de procesamiento del lenguaje natural (NLP) y machine learning para entender y responder a las preguntas de los usuarios de manera precisa y coherente. Utilizamos modelos de lenguaje como GPT para generar respuestas naturales y relevantes, adaptando el conocimiento del bot a las necesidades específicas de cada cliente. Funciona con funcionamiento, AI, inteligencia artificial."
+    - text: "El chatbot de NexAI opera mediante algoritmos de inteligencia artificial y procesamiento del lenguaje natural, lo que le permite comprender y responder adecuadamente a las consultas de los usuarios. Utilizamos tecnologías como GPT para asegurar respuestas precisas y contextualmente apropiadas. Funciona con funcionamiento, AI, inteligencia artificial."
+
+  utter_technologies_used:
+    - text: "Usamos una variedad de tecnologías avanzadas para desarrollar nuestros chatbots, incluyendo Rasa, BERT, DIET, la API de OpenAI, spaCy y TED. Trabaja con tecnologías, herramientas, software."
+    - text: "Para el desarrollo de nuestros chatbots, empleamos tecnologías como Rasa, BERT, DIET, la API de OpenAI, spaCy y TED, asegurando así una robusta capacidad de procesamiento y respuesta. Trabaja con tecnologías, herramientas, software."
+
+  utter_crm_integration:
+    - text: "Sí, nuestro chatbot puede integrarse con su CRM actual, facilitando la gestión de datos y mejorando la interacción con sus clientes. Integra con integración, CRM, sistema."
+    - text: "Nuestro chatbot es compatible con su sistema CRM, permitiendo una integración eficiente que optimiza la gestión de clientes y la interacción de datos. Integra con integración, CRM, sistema."
+
+  utter_programming_languages:
+    - text: "Utilizamos principalmente Python y JavaScript para desarrollar nuestras soluciones de chatbot. Trabaja con lenguajes de programación, código, software."
+    - text: "Los lenguajes de programación que usamos incluyen Python y JavaScript, ideales para la creación de chatbots eficientes y funcionales. Trabaja con lenguajes de programación, código, software."
+
+  utter_security:
+    - text: "Manejamos la seguridad y privacidad de los datos con el mayor cuidado. Implementamos medidas de seguridad robustas como encriptación de datos, autenticación de usuarios y cumplimiento de normativas de privacidad para garantizar que los datos de nuestros clientes estén siempre protegidos. Garantiza seguridad, privacidad, protección de datos."
+    - text: "La seguridad de los datos es una prioridad para nosotros. Aplicamos medidas como la encriptación de datos y la autenticación de usuarios, asegurando el cumplimiento de las normativas de privacidad. Garantiza seguridad, privacidad, protección de datos."
+
+  utter_multilingual_support:
+    - text: "Sí, nuestro chatbot puede entender y responder en varios idiomas, lo que permite ofrecer soporte a una audiencia global. Soporta multilingüe, idiomas, soporte."
+    - text: "El chatbot está diseñado para ser multilingüe, siendo capaz de interactuar en diversos idiomas para atender a usuarios de diferentes regiones. Soporta multilingüe, idiomas, soporte."
+
+  utter_platform_specific_solutions:
+    - text: "Sí, ofrecemos soluciones de chatbot para plataformas específicas como WhatsApp, Facebook Messenger y otras, asegurando una integración fluida y eficiente. Funciona con plataformas, WhatsApp, Facebook Messenger."
+    - text: "Desarrollamos chatbots para plataformas específicas como WhatsApp y Facebook Messenger, garantizando una integración perfecta y una funcionalidad optimizada. Funciona con plataformas, WhatsApp, Facebook Messenger."
+
+  utter_training:
+    - text: "Entrenamos a nuestros chatbots utilizando datos específicos de la industria y ejemplos de conversaciones reales. El proceso incluye el uso de técnicas avanzadas de machine learning para mejorar continuamente la precisión y relevancia de las respuestas. Entrena con entrenamiento, precisión, métodos."
+    - text: "El proceso de entrenamiento de nuestros chatbots involucra el uso de datos sectoriales y conversaciones reales, aplicando técnicas de machine learning para perfeccionar la precisión y relevancia de las respuestas. Entrena con entrenamiento, precisión, métodos."
+
+  utter_ml_algorithms:
+    - text: "Usamos diversos algoritmos de aprendizaje automático, incluyendo redes neuronales profundas, modelos de transformers como BERT y GPT, y algoritmos de clasificación y clustering para mejorar la precisión y efectividad del chatbot. Funciona con algoritmos, machine learning, aprendizaje automático."
+    - text: "Nuestros chatbots se basan en algoritmos de aprendizaje automático como redes neuronales, BERT, GPT, y otros modelos de clasificación y clustering para garantizar alta precisión y efectividad. Funciona con algoritmos, machine learning, aprendizaje automático."
+
+  utter_customization:
+    - text: "Ofrecemos una amplia gama de personalizaciones para nuestros chatbots, desde la apariencia y el tono de conversación hasta la integración con sistemas específicos y la configuración de flujos de conversación personalizados para satisfacer las necesidades únicas de su negocio. Personaliza con personalización, características, opciones."
+    - text: "Nuestros chatbots pueden ser personalizados en diversos aspectos, como la apariencia, el tono de conversación y la integración con sistemas específicos, adaptándose a las necesidades de su negocio. Personaliza con personalización, características, opciones."
+
+  utter_app_integration:
+    - text: "Sí, nuestro chatbot puede integrarse con sus aplicaciones existentes, permitiendo una integración fluida y mejorando la experiencia del usuario. Integra con integración, aplicaciones, apps."
+    - text: "El chatbot puede ser integrado con sus aplicaciones actuales, asegurando una integración sin problemas y mejorando la experiencia de sus usuarios. Integra con integración, aplicaciones, apps."
+
+  utter_subscription:
+    - text: "Sí, ofrecemos un modelo de suscripción con un plan único de compra y mantenimiento mensual, adaptado a sus necesidades específicas. Ofrece suscripción, pago, tarifas."
+    - text: "Contamos con un modelo de suscripción que incluye una compra inicial y un mantenimiento mensual, ajustado a los requerimientos específicos de cada cliente. Ofrece suscripción, pago, tarifas."
+
+  utter_maintenance_costs:
+    - text: "No, no hay costos adicionales por mantenimiento y actualizaciones. Nuestro plan de mantenimiento mensual cubre todas estas necesidades. Cubre mantenimiento, costos, actualizaciones."
+    - text: "No hay cargos adicionales por mantenimiento o actualizaciones; nuestro plan mensual cubre todas estas necesidades. Cubre mantenimiento, costos, actualizaciones."
+
+  utter_free_trials:
+    - text: "No, actualmente no ofrecemos pruebas gratuitas o demos de nuestros chatbots. No ofrece pruebas gratuitas, demos, prueba."
+    - text: "Por el momento, no disponemos de pruebas gratuitas o demos de nuestros chatbots. No ofrece pruebas gratuitas, demos, prueba."
+
+  utter_competitive_advantages:
+    - text: "Nuestros chatbots destacan por su alta precisión, capacidad de personalización y facilidad de integración con múltiples plataformas. Además, utilizamos las últimas tecnologías en AI y NLP para asegurar que nuestros chatbots sean más inteligentes y eficientes que otras soluciones en el mercado. Ofrece ventajas, competitividad, beneficios."
+    - text: "Las ventajas competitivas de nuestros chatbots incluyen alta precisión, personalización y fácil integración con diversas plataformas, utilizando tecnologías avanzadas en AI y NLP. Ofrece ventajas, competitividad, beneficios."
+
+  utter_support_after_implementation:
+    - text: "Ofrecemos soporte continuo después de la implementación, incluyendo asistencia técnica y resolución de problemas para garantizar que su chatbot funcione de manera óptima. Ofrece soporte, post-implementación, asistencia."
+    - text: "Proporcionamos soporte post-implementación, asegurando asistencia técnica y resolución de problemas para mantener su chatbot en óptimas condiciones. Ofrece soporte, post-implementación, asistencia."
+
+  utter_24_7_support:
+    - text: "Sí, nuestro chatbot puede proporcionar soporte al cliente las 24 horas del día, asegurando que sus clientes siempre obtengan la ayuda que necesitan. Ofrece soporte 24/7, atención al cliente, disponibilidad."
+    - text: "Nuestro chatbot está disponible para ofrecer soporte al cliente las 24 horas del día, garantizando ayuda continua para sus clientes. Ofrece soporte 24/7, atención al cliente, disponibilidad."
+
+  utter_complex_questions:
+    - text: "Sí, nuestro chatbot está diseñado para reconocer y responder a preguntas complejas, utilizando avanzadas técnicas de procesamiento del lenguaje natural para entender mejor las consultas de los usuarios. Responde preguntas complejas, difíciles, comprensión."
+    - text: "El chatbot puede manejar preguntas complejas, gracias a las técnicas avanzadas de procesamiento del lenguaje natural que permiten una mejor comprensión de las consultas. Responde preguntas complejas, difíciles, comprensión."
+
+  utter_scalability:
+    - text: "Sí, nuestras soluciones de chatbot son escalables y pueden crecer junto con su empresa, adaptándose a un mayor volumen de consultas y a nuevas necesidades a medida que evolucionan. Ofrece escalabilidad, crecimiento, capacidades."
+    - text: "Nuestras soluciones de chatbot son escalables, permitiendo crecer con su empresa y adaptarse a un aumento en el volumen de consultas y nuevas necesidades. Ofrece escalabilidad, crecimiento, capacidades."
+
+  utter_concurrent_conversations:
+    - text: "Sí, nuestro chatbot puede manejar múltiples conversaciones simultáneamente, asegurando que todos sus clientes reciban respuestas rápidas y eficientes. Soporta múltiples conversaciones, simultáneo, gestión."
+    - text: "El chatbot está capacitado para gestionar múltiples conversaciones al mismo tiempo, garantizando respuestas rápidas y eficientes para todos sus clientes. Soporta múltiples conversaciones, simultáneo, gestión."
+
+  utter_benefits:
+    - text: "Un chatbot puede aportar numerosos beneficios a su empresa, como mejorar la eficiencia operativa, proporcionar soporte al cliente ininterrumpido, reducir costos operativos, y aumentar la satisfacción del cliente al ofrecer respuestas rápidas y precisas. Ofrece beneficios, ventajas, empresa."
+    - text: "Los chatbots ofrecen varios beneficios a las empresas, incluyendo mayor eficiencia operativa, soporte continuo al cliente, reducción de costos y aumento de la satisfacción del cliente mediante respuestas rápidas y precisas. Ofrece beneficios, ventajas, empresa."
+
+  utter_success_measurement:
+    - text: "Medimos el éxito y la efectividad de nuestros chatbots mediante métricas clave como la tasa de resolución de consultas, el tiempo de respuesta, la satisfacción del cliente y la tasa de retención de usuarios. Estas métricas nos permiten ajustar y mejorar continuamente el rendimiento del chatbot. Mide éxito, efectividad, métricas."
+    - text: "Evaluamos el éxito y la efectividad de nuestros chatbots usando métricas como la tasa de resolución de consultas, tiempos de respuesta, satisfacción del cliente y retención de usuarios, permitiéndonos mejorar continuamente. Mide éxito, efectividad, métricas."
+
+  utter_performance_analysis:
+    - text: "Proporcionamos análisis e informes detallados sobre el rendimiento del chatbot, incluyendo métricas como la cantidad de interacciones, la tasa de éxito en la resolución de consultas, tiempos de respuesta y feedback de los usuarios. Estos informes ayudan a identificar áreas de mejora y optimizar el rendimiento del chatbot. Analiza análisis, informes, rendimiento."
+    - text: "Ofrecemos análisis e informes completos sobre el rendimiento del chatbot, con métricas como interacciones, tasa de éxito en consultas, tiempos de respuesta y feedback de usuarios, facilitando la identificación de mejoras. Analiza análisis, informes, rendimiento."
+
+  utter_customer_experience:
+    - text: "Sí, el chatbot puede mejorar significativamente la experiencia del cliente al proporcionar respuestas rápidas, precisas y disponibles las 24 horas del día. Esto aumenta la satisfacción del cliente y mejora la percepción de su marca. Mejora experiencia del cliente, satisfacción, interacción."
+    - text: "El chatbot mejora la experiencia del cliente ofreciendo respuestas rápidas y precisas las 24 horas, incrementando la satisfacción del cliente y la percepción positiva de su marca. Mejora experiencia del cliente, satisfacción, interacción."
+
+  utter_response_quality:
+    - text: "Garantizamos la calidad de las respuestas del chatbot mediante un riguroso proceso de entrenamiento y pruebas continuas. Utilizamos técnicas avanzadas de NLP y aprendizaje automático para asegurarnos de que las respuestas sean precisas, relevantes y útiles para los usuarios. Garantiza calidad de respuestas, precisión, relevancia."
+    - text: "Aseguramos la calidad de las respuestas del chatbot con un proceso de entrenamiento exhaustivo y pruebas continuas, utilizando técnicas de NLP y aprendizaje automático para garantizar precisión y relevancia. Garantiza calidad de respuestas, precisión, relevancia."
+
+  utter_chatbot_cost:
+    - text: "El costo de un chatbot depende de las necesidades específicas de cada cliente. Hacemos planes personalizados para asegurar que cada solución sea asequible y efectiva. Calcula costo, precio, valor."
+    - text: "El precio de un chatbot varía según las necesidades del cliente. Ofrecemos planes personalizados para garantizar soluciones asequibles y efectivas. Calcula costo, precio, valor."
+
+  utter_pricing_plans:
+    - text: "Ofrecemos planes de precios personalizados según las necesidades de cada cliente. No tenemos un esquema fijo, sino que adaptamos nuestras soluciones a sus requerimientos. Ofrece planes de precios, opciones de pago, tarifas."
+    - text: "Nuestros planes de precios son personalizados, ajustándose a las necesidades específicas de cada cliente en lugar de seguir un esquema fijo. Ofrece planes de precios, opciones de pago, tarifas."
+
+  utter_startup_discounts:
+    - text: "No, actualmente no ofrecemos descuentos específicos para startups. No ofrece descuentos, startups, precios especiales."
+    - text: "Por el momento, no tenemos descuentos especiales para startups. No ofrece descuentos, startups, precios especiales."
+
+  utter_cost_calculation:
+    - text: "Calculamos el costo de un proyecto de chatbot considerando varios factores como el alcance del proyecto, las funcionalidades requeridas, el nivel de personalización y la complejidad de las integraciones necesarias. Cada proyecto es evaluado individualmente para proporcionar una cotización precisa. Calcula cálculo de costos, factores, precio."
+    - text: "El costo de un chatbot se determina por factores como el alcance del proyecto, funcionalidades, personalización e integraciones necesarias. Evaluamos cada proyecto individualmente para ofrecer una cotización exacta. Calcula cálculo de costos, factores, precio."
+
+  utter_included_services:
+    - text: "El precio de nuestro servicio de chatbot incluye el desarrollo, implementación, integración con sistemas existentes, personalización según sus necesidades, y soporte continuo. Nos aseguramos de cubrir todas las fases del proyecto para que obtenga una solución completa y funcional. Incluye servicios incluidos, precio, oferta."
+    - text: "Nuestro servicio de chatbot incluye desarrollo, implementación, integración con sistemas existentes, personalización y soporte continuo, asegurando una solución completa y efectiva. Incluye servicios incluidos, precio, oferta."
+
+  utter_custom_quote:
+    - text: "Sí, podemos proporcionarle una cotización personalizada adaptada a sus necesidades y requerimientos específicos. Proporciona cotización personalizada, a medida, específica."
+    - text: "Claro, podemos elaborar una cotización personalizada basada en sus necesidades y especificaciones. Proporciona cotización personalizada, a medida, específica."
+
+  utter_special_offers:
+    - text: "No, en este momento no tenemos ofertas especiales disponibles. No ofrece ofertas especiales, promociones, descuentos."
+    - text: "Actualmente, no contamos con ofertas especiales. No ofrece ofertas especiales, promociones, descuentos."
+
+  utter_company_info:
+    - text: "Nuestra empresa se especializa en el desarrollo de chatbots avanzados impulsados por inteligencia artificial. Ofrecemos soluciones personalizadas para mejorar la interacción con clientes y optimizar procesos de negocio mediante el uso de tecnologías de vanguardia en NLP y machine learning. Ofrece información de la empresa, actividad, servicios."
+    - text: "Nos dedicamos al desarrollo de chatbots avanzados con inteligencia artificial, proporcionando soluciones personalizadas para mejorar la interacción con clientes y optimizar procesos empresariales usando tecnologías avanzadas de NLP y machine learning. Ofrece información de la empresa, actividad, servicios."
+
+  utter_business_duration:
+    - text: "Somos una startup que comenzó a inicios de 2024. Aunque somos una empresa joven, contamos con un equipo experimentado y apasionado por la tecnología de chatbots. Ofrece duración del negocio, tiempo, mercado."
+    - text: "Iniciamos operaciones a principios de 2024. Pese a ser una empresa joven, nuestro equipo tiene amplia experiencia y una gran pasión por la tecnología de chatbots. Ofrece duración del negocio, tiempo, mercado."
+
+  utter_location:
+    - text: "Estamos ubicados en Buenos Aires, Argentina. Ubica ubicación, oficinas, ciudad."
+    - text: "Nuestras oficinas se encuentran en Buenos Aires, Argentina. Ubica ubicación, oficinas, ciudad."
+
+actions:
+  - action_openai_response

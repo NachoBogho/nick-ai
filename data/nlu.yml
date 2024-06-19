@@ -1,0 +1,426 @@
+version: "2.0"
+nlu:
+  - intent: greet
+    examples: |
+      - Hola
+      - Buenas
+      - Hola, ¿cómo estás?
+      - Buenas tardes
+      - Hola, soy nuevo aquí
+      - Hola, ¿puedes ayudarme?
+      - Buenas noches
+      - Hola, ¿qué tal?
+      - Hola, ¿en qué puedo ayudarte?
+      - Hola, ¿qué haces?
+      - Hola, ¿cuál es tu función?
+      - ¿Qué tal?
+      - ¿Cómo va?
+      - Hola, ¿cómo te encuentras?
+
+  - intent: ask_how_it_works
+    examples: |
+      - ¿Cómo funciona el chatbot basado en AI?
+      - ¿Cómo funciona su chatbot con inteligencia artificial?
+      - Explíqueme el funcionamiento del chatbot basado en AI
+      - ¿Puedes explicarme cómo trabaja el chatbot?
+      - ¿Cómo opera el chatbot?
+      - ¿Cuál es el modo de funcionamiento del chatbot?
+      - Funciona
+      - Explicar cómo funciona
+      - ¿Cómo trabaja?
+      - ¿Cómo opera?
+      - ¿Cómo se usa?
+      - ¿Cómo funciona el chat?
+
+
+  - intent: ask_technologies_used
+    examples: |
+      - ¿Qué tecnologías usan para desarrollar sus chatbots?
+      - ¿Qué herramientas utilizan para crear sus chatbots?
+      - ¿Qué tecnologías emplean en el desarrollo de los chatbots?
+      - ¿Qué software utilizan para sus chatbots?
+      - ¿Qué tecnología está detrás de sus chatbots?
+      - ¿Qué sistemas usan para construir chatbots?
+      - Tecnologías utilizadas
+      - Herramientas de desarrollo
+      - ¿Qué tecnología emplean?
+      - ¿Qué software usan?
+      - ¿Qué sistemas utilizan?
+      - ¿Qué herramientas de desarrollo usan?
+      - ¿Qué tecnología está detrás?
+      - ¿Qué tecnología utilizan?
+      - ¿Que usan para crear el bot?
+
+  - intent: ask_crm_integration
+    examples: |
+      - ¿El chatbot puede integrarse con nuestra CRM actual?
+      - ¿Es posible conectar el chatbot con nuestro CRM?
+      - ¿Pueden integrar el chatbot con nuestra CRM?
+      - ¿El chatbot se puede conectar a nuestro sistema CRM?
+      - ¿Puede el chatbot enlazarse con nuestro CRM?
+      - ¿El chatbot es compatible con nuestro CRM?
+      - ¿Se puede integrar el chatbot con nuestra CRM?
+      - ¿El chatbot funciona con nuestro CRM?
+      - ¿El chatbot se conecta a nuestro CRM?
+      - ¿El chatbot es compatible con nuestro sistema CRM?
+      - ¿El chatbot se integra con nuestro CRM?
+      - ¿El chatbot puede conectarse a nuestro CRM?
+
+
+  - intent: ask_programming_languages
+    examples: |
+      - ¿Qué lenguajes de programación utilizan en sus soluciones de chatbot?
+      - ¿Qué lenguajes de programación usan para sus chatbots?
+      - ¿Qué lenguajes de programación emplean?
+      - ¿Qué lenguajes de código usan para sus chatbots?
+      - ¿Con qué lenguajes programan sus chatbots?
+      - ¿Qué lenguajes de software utilizan?
+      - ¿Qué lenguajes de programación aplican?
+      - ¿Qué lenguajes de programación se usan?
+      - ¿Qué lenguajes de programación se emplean?
+      - ¿Cuales lenguajes usan para programar el chat?
+      - ¿Qué lenguajes de programación usan para el chatbot?
+      - ¿Qué lenguajes de programación utilizan para el chatbot?
+      - ¿Con que esta programado el chatbot?
+
+  - intent: ask_security
+    examples: |
+      - ¿Cómo manejan la seguridad y privacidad de los datos?
+      - ¿Cómo garantizan la seguridad de los datos?
+      - ¿Qué medidas de seguridad utilizan para proteger la privacidad de los datos?
+      - ¿Cómo aseguran la protección de los datos?
+      - ¿Qué hacen para mantener los datos seguros?
+      - ¿Qué políticas de seguridad aplican?
+      - ¿Cómo protegen la información?
+      - ¿Qué medidas de seguridad tienen?
+      - ¿Cómo aseguran la privacidad de los datos?
+      - ¿Qué hacen para proteger la información?
+      - ¿Cómo garantizan la seguridad de los datos?
+      - ¿Qué medidas de seguridad toman?
+
+  - intent: ask_multilingual_support
+    examples: |
+      - ¿El chatbot puede entender y responder en varios idiomas?
+      - ¿El chatbot soporta múltiples idiomas?
+      - ¿Es posible que el chatbot hable varios idiomas?
+      - ¿El chatbot puede comunicarse en diferentes idiomas?
+      - ¿El chatbot es multilingüe?
+      - ¿Puede el chatbot responder en distintos idiomas?
+      - ¿El chatbot entiende varios idiomas?
+      - ¿El chatbot soporta diferentes idiomas?
+      - ¿El chatbot puede hablar en varios idiomas?
+      - ¿El chatbot es políglota?
+      - ¿El chatbot puede responder en varios idiomas?
+      - ¿El chatbot es multilingüe?
+
+
+  - intent: ask_platform_specific_solutions
+    examples: |
+      - ¿Ofrecen soluciones de chatbot para plataformas específicas como WhatsApp o Facebook Messenger?
+      - ¿Pueden crear chatbots para plataformas específicas?
+      - ¿Desarrollan chatbots para plataformas como WhatsApp o Facebook Messenger?
+      - ¿Hacen chatbots para plataformas concretas?
+      - ¿Sus chatbots funcionan en plataformas como WhatsApp?
+      - ¿Pueden hacer chatbots para Messenger y WhatsApp?
+      - ¿Ofrecen soluciones para plataformas específicas?
+      - ¿Desarrollan chatbots para Messenger y WhatsApp?
+
+  - intent: ask_training
+    examples: |
+      - ¿Cómo entrenan a sus chatbots para mejorar su precisión?
+      - ¿Cuál es el proceso de entrenamiento de sus chatbots?
+      - ¿Cómo mejoran la precisión de sus chatbots?
+      - ¿Qué métodos usan para entrenar a los chatbots?
+      - ¿Cómo se entrenan sus chatbots?
+      - ¿Qué técnicas de entrenamiento aplican a los chatbots?
+
+  - intent: ask_ml_algorithms
+    examples: |
+      - ¿Qué tipo de algoritmos de aprendizaje automático usan?
+      - ¿Qué algoritmos de machine learning emplean?
+      - ¿Qué técnicas de aprendizaje automático utilizan?
+      - ¿Qué modelos de machine learning aplican?
+      - ¿Qué tipo de machine learning usan?
+      - ¿Qué algoritmos aplican en el chatbot?
+
+  - intent: ask_customization
+    examples: |
+      - ¿Qué tipo de personalización ofrecen para los chatbots?
+      - ¿Cómo pueden personalizar los chatbots?
+      - ¿Qué opciones de personalización están disponibles para los chatbots?
+      - ¿Pueden adaptar los chatbots a nuestras necesidades?
+      - ¿Qué características personalizadas ofrecen?
+      - ¿Qué nivel de personalización brindan?
+
+  - intent: ask_app_integration
+    examples: |
+      - ¿El chatbot puede integrarse con nuestras aplicaciones existentes?
+      - ¿Es posible integrar el chatbot con nuestras aplicaciones?
+      - ¿Pueden conectar el chatbot con nuestras aplicaciones existentes?
+      - ¿El chatbot puede trabajar con nuestras apps actuales?
+      - ¿Se puede enlazar el chatbot con nuestras aplicaciones?
+      - ¿Es posible la integración con nuestras apps?
+
+  - intent: ask_subscription
+    examples: |
+      - ¿Ofrecen algún tipo de suscripción o modelo de pago por uso?
+      - ¿Tienen un modelo de suscripción para los chatbots?
+      - ¿Cómo se manejan los pagos por uso de los chatbots?
+      - ¿Ofrecen planes de suscripción?
+      - ¿Tienen tarifas por uso?
+      - ¿Cuáles son las opciones de pago?
+
+  - intent: ask_maintenance_costs
+    examples: |
+      - ¿Hay costos adicionales por mantenimiento y actualizaciones?
+      - ¿Cobran por el mantenimiento y actualizaciones?
+      - ¿Existen costos extra por mantenimiento?
+      - ¿Hay cargos por mantenimiento?
+      - ¿Los updates tienen algún costo?
+      - ¿Las actualizaciones son de pago?
+
+  - intent: ask_free_trials
+    examples: |
+      - ¿Ofrecen pruebas gratuitas o demos de sus chatbots?
+      - ¿Puedo probar el chatbot gratis?
+      - ¿Tienen demos disponibles para probar?
+      - ¿Ofrecen demos gratuitas?
+      - ¿Puedo hacer una prueba del chatbot sin costo?
+      - ¿Hay alguna prueba gratuita?
+
+  - intent: ask_competitive_advantages
+    examples: |
+      - ¿Cuáles son las ventajas competitivas de sus chatbots en comparación con otras soluciones en el mercado?
+      - ¿Qué beneficios tienen sus chatbots frente a la competencia?
+      - ¿Por qué elegir sus chatbots sobre otras opciones?
+      - ¿Qué los hace mejores que la competencia?
+      - ¿Qué diferencia a sus chatbots de otros?
+      - ¿Por qué sus chatbots son superiores?
+
+  - intent: ask_support_after_implementation
+    examples: |
+      - ¿Qué tipo de soporte ofrecen después de la implementación?
+      - ¿Qué soporte brindan tras implementar el chatbot?
+      - ¿Cómo es el soporte post-implementación?
+      - ¿Qué ayuda dan después de implementar el chatbot?
+      - ¿Qué tipo de asistencia ofrecen tras la implementación?
+      - ¿Qué soporte hay después de poner en marcha el chatbot?
+
+  - intent: ask_24_7_support
+    examples: |
+      - ¿Puede el chatbot proporcionar soporte al cliente las 24 horas del día?
+      - ¿El chatbot ofrece soporte 24/7?
+      - ¿Es posible obtener soporte al cliente en cualquier momento?
+      - ¿El chatbot está disponible todo el día?
+      - ¿Hay soporte permanente?
+      - ¿Se ofrece atención al cliente en todo momento?
+
+  - intent: ask_complex_questions
+    examples: |
+      - ¿El chatbot puede reconocer y responder a preguntas complejas?
+      - ¿Puede el chatbot manejar preguntas difíciles?
+      - ¿El chatbot es capaz de entender preguntas complicadas?
+      - ¿El chatbot puede responder preguntas difíciles?
+      - ¿Puede el chatbot resolver dudas complejas?
+      - ¿El chatbot entiende preguntas elaboradas?
+
+  - intent: ask_scalability
+    examples: |
+      - ¿Es posible escalar las capacidades del chatbot a medida que crece nuestra empresa?
+      - ¿El chatbot puede crecer con nuestra empresa?
+      - ¿Pueden aumentar las capacidades del chatbot según nuestras necesidades?
+      - ¿El chatbot es escalable?
+      - ¿El chatbot puede adaptarse a nuestro crecimiento?
+      - ¿Puede el chatbot escalar con nuestra empresa?
+
+  - intent: ask_concurrent_conversations
+    examples: |
+      - ¿El chatbot puede manejar múltiples conversaciones simultáneamente?
+      - ¿Puede el chatbot gestionar varias conversaciones al mismo tiempo?
+      - ¿El chatbot puede hablar con varios usuarios a la vez?
+      - ¿El chatbot maneja varias conversaciones a la vez?
+      - ¿Puede el chatbot atender múltiples chats al mismo tiempo?
+      - ¿El chatbot puede gestionar múltiples chats?
+
+  - intent: ask_benefits
+    examples: |
+      - ¿Qué beneficios puede aportar un chatbot a nuestra empresa?
+      - ¿Qué ventajas tiene un chatbot para nuestra empresa?
+      - ¿Cómo puede beneficiarse nuestra empresa de un chatbot?
+      - ¿Qué puede aportar un chatbot a nuestro negocio?
+      - ¿Cómo ayuda un chatbot a nuestra empresa?
+      - ¿Qué beneficios trae un chatbot?
+
+  - intent: ask_success_measurement
+    examples: |
+      - ¿Cómo se mide el éxito y la efectividad de sus chatbots?
+      - ¿Qué métricas utilizan para evaluar el éxito del chatbot?
+      - ¿Cómo determinan la efectividad de los chatbots?
+      - ¿Qué indicadores usan para medir el éxito del chatbot?
+      - ¿Cómo se mide el rendimiento del chatbot?
+      - ¿Qué criterios usan para evaluar el éxito?
+
+  - intent: ask_performance_analysis
+    examples: |
+      - ¿Qué tipo de análisis e informes pueden proporcionar sobre el rendimiento del chatbot?
+      - ¿Qué informes de rendimiento ofrecen para los chatbots?
+      - ¿Pueden proporcionar análisis del rendimiento del chatbot?
+      - ¿Hacen reportes de rendimiento del chatbot?
+      - ¿Qué reportes de análisis tienen sobre el chatbot?
+      - ¿Pueden analizar el rendimiento del chatbot?
+
+  - intent: ask_customer_experience
+    examples: |
+      - ¿El chatbot puede mejorar la experiencia del cliente?
+      - ¿Cómo mejora el chatbot la experiencia del cliente?
+      - ¿Puede el chatbot mejorar la satisfacción del cliente?
+      - ¿El chatbot mejora la experiencia del usuario?
+      - ¿Cómo ayuda el chatbot a la satisfacción del cliente?
+      - ¿El chatbot puede mejorar la interacción con el cliente?
+
+  - intent: ask_response_quality
+    examples: |
+      - ¿Cómo garantizan la calidad de las respuestas del chatbot?
+      - ¿Qué hacen para asegurar la calidad de las respuestas del chatbot?
+      - ¿Cómo aseguran la precisión y relevancia de las respuestas del chatbot?
+      - ¿Cómo mantienen la calidad de las respuestas del chatbot?
+      - ¿Qué medidas toman para asegurar respuestas de calidad?
+      - ¿Cómo verifican la calidad de las respuestas del chatbot?
+
+  - intent: ask_chatbot_cost
+    examples: |
+      - ¿Cuánto cuesta un chatbot?
+      - ¿Cuál es el precio de un chatbot?
+      - ¿Qué precio tienen los chatbots?
+      - ¿Cuánto vale un chatbot?
+      - ¿Cuál es el costo de un chatbot?
+      - ¿Cuánto sale un chatbot?
+      - ¿Qué cuesta un chatbot?
+      - Precio
+      - Costo
+      - ¿Cuánto cuesta?
+      - ¿Cuál es el precio?
+      - Valor
+      - ¿Cuánto vale?
+      - ¿Cuánto sale?
+      - ¿Qué precio tiene?
+      - ¿Cuál es el costo?
+      - ¿Cuánto cuesta un chatbot?
+      - ¿Cuál es el precio de un chatbot?
+      - ¿Qué precio tienen los chatbots?
+      - ¿Cuánto vale un chatbot?
+      - ¿Cuál es el costo de un chatbot?
+      - ¿Cuánto sale un chatbot?
+      - ¿Cuanto cuesta un chatbot para mi empresa?
+      - ¿Cuanto cuesta un chatbot para mi negocio?
+      - ¿Cuanto cuesta un chatbot para mi compañía?
+      - ¿Cuanto cuesta un chatbot para mi startup?
+      - ¿Cuanto cuesta un chatbot para mi emprendimiento?
+      - ¿Cuanto cuesta un chatbot para mi organización?
+      - ¿Cuanto cuesta un chatbot para mi pyme?
+      - ¿Cuanto cuesta un chatbot para mi pequeña empresa?
+      - ¿Cuanto cuesta un chatbot para mi negocio online?
+      - ¿Cuanto cuesta un chatbot para mi tienda online?
+      - ¿Cuanto cuesta un chatbot para mi ecommerce?
+      - ¿Cuanto cuesta un chatbot para mi web?
+      - ¿Cuanto cuesta un chatbot para mi página web?
+      - ¿Cuanto cuesta un chatbot para mi sitio web?
+
+
+  - intent: ask_pricing_plans
+    examples: |
+      - ¿Tienen diferentes planes de precios?
+      - ¿Qué planes de precios ofrecen?
+      - ¿Cuáles son sus planes de precios?
+      - ¿Qué opciones de precios tienen?
+      - ¿Ofrecen planes de pago variados?
+      - ¿Qué tipos de planes de precios hay?
+      - ¿Qué planes de tarifas tienen?
+      - ¿Qué opciones de pago ofrecen?
+      - ¿Qué tarifas tienen disponibles?
+      - ¿Qué planes de precios tienen disponibles?
+      - ¿Qué opciones de pago tienen?
+      - ¿Qué tarifas ofrecen?
+      - ¿Qué planes de precios tienen?
+
+  - intent: ask_startup_discounts
+    examples: |
+      - ¿Ofrecen descuentos para startups?
+      - ¿Tienen algún descuento para startups?
+      - ¿Hay algún descuento disponible para startups?
+      - ¿Ofrecen precios especiales para startups?
+      - ¿Tienen tarifas reducidas para startups?
+      - ¿Existen descuentos para nuevas empresas?
+
+  - intent: ask_cost_calculation
+    examples: |
+      - ¿Cómo calculan el costo de un proyecto de chatbot?
+      - ¿Cómo determinan el precio de un chatbot?
+      - ¿Qué factores influyen en el costo de un chatbot?
+      - ¿Cómo se determina el costo de un chatbot?
+      - ¿Qué elementos consideran para calcular el precio?
+      - ¿Cómo se establece el precio de un chatbot?
+
+  - intent: ask_included_services
+    examples: |
+      - ¿Qué incluye el precio de su servicio de chatbot?
+      - ¿Qué servicios están incluidos en el precio del chatbot?
+      - ¿Qué obtengo con su servicio de chatbot?
+      - ¿Qué está incluido en el precio del chatbot?
+      - ¿Qué servicios se ofrecen con el chatbot?
+      - ¿Qué viene con el servicio de chatbot?
+
+  - intent: ask_custom_quote
+    examples: |
+      - ¿Puedo obtener una cotización personalizada?
+      - ¿Es posible obtener una cotización personalizada?
+      - ¿Pueden darme una cotización personalizada?
+      - ¿Puedo solicitar una cotización a medida?
+      - ¿Es posible recibir una cotización específica?
+      - ¿Pueden elaborar una cotización personalizada?
+
+  - intent: ask_special_offers
+    examples: |
+      - ¿Tienen alguna oferta especial en este momento?
+      - ¿Hay alguna promoción especial actualmente?
+      - ¿Ofrecen alguna oferta especial?
+      - ¿Tienen descuentos especiales ahora?
+      - ¿Hay promociones vigentes?
+      - ¿Existen ofertas especiales ahora mismo?
+
+  - intent: ask_company_info
+    examples: |
+      - ¿Qué hace su empresa?
+      - ¿A qué se dedica su empresa?
+      - ¿Cuál es la actividad principal de su empresa?
+      - ¿Qué servicios ofrece su empresa?
+      - ¿Qué productos tiene su empresa?
+      - ¿Cuál es la misión de su empresa?
+
+  - intent: ask_business_duration
+    examples: |
+      - ¿Cuánto tiempo llevan en el negocio de los chatbots?
+      - ¿Desde cuándo están en el negocio de los chatbots?
+      - ¿Cuánto tiempo tiene su empresa?
+      - ¿Desde cuándo operan en el sector de chatbots?
+      - ¿Cuánto tiempo llevan desarrollando chatbots?
+      - ¿Cuánto tiempo llevan en el mercado de chatbots?
+
+  - intent: ask_location
+    examples: |
+      - ¿Dónde están ubicados?
+      - ¿Cuál es su ubicación?
+      - ¿Dónde se encuentran?
+      - ¿Dónde están sus oficinas?
+      - ¿En qué ciudad están?
+      - ¿Cuál es su dirección?
+      - ¿Dónde tienen su sede?
+      - Ubicacion
+      - ¿Donde estan?
+      - ¿Donde se encuentran?
+      - ¿Donde estan ubicados?
+      - ¿Donde estan sus oficinas?
+      - ¿En que ciudad estan?
+      - ¿Cual es su direccion?
+      - ¿Donde tienen su sede?
+      - ¿Donde estan ubicados ustedes?
