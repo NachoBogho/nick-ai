@@ -6,78 +6,141 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    padding-top: 2.4rem;
-    gap: 2rem;
-    
+    padding-top: 2.3rem;
 
-    .display-right{
+    .bg-form{
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        width: 20%;
-        height: 482px;
-        margin-left: 6rem;
+        align-items: center;
         background-color: #1c1c1c;
-        border-radius: 3rem 3rem 3rem 3rem;
-        padding: 5rem;
-        z-index: -1;
-        
+        padding: 1.3rem;
+        width: 65%;
+        border-radius: 3rem;
+        gap: 3rem;
 
-        h5{ 
-            margin-top: 3rem;
-            font-family: $font-primary;
-            font-weight: 700;
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: $color-secondary;
-            width: 100%;
-            
-        }
-        h6{
-            font-family: $font-primary;
-            color: $color-secondary;
-            font-weight: 700;
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 5rem;
-            
+
+        .der-display{
+
+            h4{
+                font-family: $font-primary;
+                font-weight: 700;
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                color: #ececec;
+                text-align: center;
+            }
+            h5{
+                font-family: $font-primary;
+                font-weight: 700;
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+                color: #ececec;
+                text-align: center;
+            }
+
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                
+
+                p{
+                    font-family: $font-secondary;
+                    font-size: 1.1rem;
+                    color: #ececec;
+                    text-align: center;
+                }
+                a{
+                    font-family: $font-secondary;
+                    font-size: 1rem;
+                    color: #1c1c1c;
+                    text-align: center;
+                    text-decoration: none;
+                    background-color: #ececec;
+                    padding: 1rem;
+                    border-radius: 1rem;
+
+                    &:hover{
+                        background-color: #d6d5d5;
+                    }
+
+                }
+            }
         }
 
-        div{
-        width: 100%;
+    }
+}
+
+.display-title-l{
+    width: 100%;
+    display: flex;
+    height: 94.5vh;
+    align-items: center;
+    justify-content: center;
+
+    .bg-form-l{
         display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
-            p{
-                font-family: $font-secondary;
-                color: $color-secondary;
-                font-size: 1.5rem;
-                margin-bottom: 4rem;
+        background-color: #1c1c1c;
+        padding: 1.3rem;
+        width: 55%;
+        border-radius: 3rem;
+        gap: 3rem;
+
+
+        .der-display{
+
+            h4{
+                font-family: $font-primary;
+                font-weight: 700;
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                color: #ececec;
+                text-align: center;
             }
-    
-            a{
-                    width: 100%;
-                    padding: 0.5rem;
-                    margin-bottom: 1rem;
+            h5{
+                font-family: $font-primary;
+                font-weight: 700;
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+                color: #ececec;
+                text-align: center;
+            }
+
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                
+
+                p{
                     font-family: $font-secondary;
-                    border-radius: 0.5rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: solid 1px $color-secondary;
-                    background-color: $color-secondary;
-                    color: $color-primary;
-                    font-size: 0.9rem;
-                    cursor: pointer;
+                    font-size: 1.1rem;
+                    color: #ececec;
+                    text-align: center;
+                }
+                a{
+                    font-family: $font-secondary;
+                    font-size: 1rem;
+                    color: #1c1c1c;
+                    text-align: center;
                     text-decoration: none;
-    
-    
+                    background-color: #ececec;
+                    padding: 1rem;
+                    border-radius: 1rem;
+
+                    &:hover{
+                        background-color: #d6d5d5;
+                    }
+
+                }
             }
+
         }
-
-
     }
 }

@@ -7,19 +7,20 @@ import { Link } from 'react-router-dom'
 const Register = () => {
   return (
     <div className='display-title'>
-      <RegisterForm />
-      <div className='display-right'>
+      <div className='bg-form'>
+      <RegisterForm className='form' />
+      <div className='der-display'>
+        <h4>¡Estas a un paso de potenciar tu negocio!</h4>
+        <h5>Con tu cuenta de usuario podrás acceder a todas las funcionalidades de la plataforma </h5>
         <div>
-          <h5>¡Estas a un paso de potenciar tu negocio!</h5>
-          <h6>Con tu cuenta de usuario podrás acceder a todas las funcionalidades de la plataforma  </h6>
+        <p>¿Ya tienes una cuenta?</p>
+        <Link to="/iniciar-sesion">Inicia sesión</Link>
 
-        </div>
-        <div>
-          <p>¿Ya tienes una cuenta? </p>
-          <Link to="/">Inicia Sesion</Link>
         </div>
 
       </div>
+      </div>
+  
     </div>
 
   )

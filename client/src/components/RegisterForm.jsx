@@ -1,32 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { registerRequest } from '../api/auth';
+import { useAuth } from '../context/AuthContext.jsx';
 import '../sass/component-styles/register-form.scss';
 
 const RegisterForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const { signup, isAuthenticated } = useAuth();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (isAuthenticated) {
+            navigate('/');
+        }
+    }, [isAuthenticated])
 
     const onSubmit = async (values) => {
-        if (values.password !== values.confirmPassword) {
-            alert("Las contraseñas no coinciden");
-            return;
-        }
-
-        values.number = parseInt(values.number, 10);
-
-        try {
-            const res = await registerRequest(values);
-            console.log('Registro exitoso:', res.data);
-        } catch (error) {
-            if (error.response) {
-                console.error('Error en la respuesta:', error.response.data);
-                alert(`Error: ${error.response.data.error[0] || 'Algo salió mal'}`);
-            } else {
-                console.error('Error:', error.message);
-                alert('Error de red o del servidor');
-            }
-        }
+        signup(values);
     };
 
     return (
@@ -95,9 +85,7 @@ const RegisterForm = () => {
                 <div className='form-sec'>
                     <button type="submit">Registrarse</button>
                 </div>
-                <div className='display-terms'>
-                    <Link to="/forgot-password">¿Olvidaste tu contraseña?</Link>
-                </div>
+
             </form>
         </div>
     );
