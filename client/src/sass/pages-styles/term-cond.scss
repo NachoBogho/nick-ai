@@ -1,0 +1,70 @@
+@import "../variables.scss";
+
+.display-terminos{
+    height: auto;
+    padding-top: 10rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    gap: 1.5rem;
+    background-color: $color-secondary;
+    padding-bottom: 5rem;
+
+    h1{
+        font-size: 2.9rem;
+        font-weight: 700;
+        color: #333;
+        font-family: $font-primary;
+        padding-bottom: 5rem;
+    
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 55%;
+        gap: 1rem;
+        text-align: start;
+        
+        h3{
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #333;
+            font-family: $font-primary;
+        }
+        p{
+            font-size: 1rem;
+            color: #333;
+            font-family: $font-secondary;
+            text-align: start;
+
+            span{
+                font-weight: 700;
+            
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 1rem;
+            li{
+                font-size: 1rem;
+                color: #333;
+                font-family: $font-secondary;
+                text-align: start;
+
+                span{
+                    font-weight: 700;
+                }
+            }
+
+        }
+    }
+}

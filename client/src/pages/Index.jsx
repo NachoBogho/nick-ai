@@ -3,7 +3,7 @@ import Inicio from '../components/Inicio'
 import About from '../components/About'
 import TryChat from '../components/TryChat'
 import Login from '../components/Login'
-import Footer from '../components/Footer'
+
 
 
 
@@ -14,7 +14,6 @@ const Index = () => {
       <About />
       <TryChat />
       <Login />
-      <Footer />
     </div>
   )
 }

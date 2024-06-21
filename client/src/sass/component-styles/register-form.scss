@@ -1,0 +1,121 @@
+@import "../variables.scss";
+
+.form-display {
+
+
+    form {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 2rem 3rem 2rem 3rem;
+        background-color: #ececec;
+        border-radius: 3rem 3rem 3rem 3rem;
+        max-height: 80vh;   
+        gap: 1rem;
+
+        h2{
+            font-family: $font-primary;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #1c1c1c;
+        }
+
+        .form-sec {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            width: 100%;
+
+            .error{
+                color: red;
+                font-size: 0.6rem;
+                font-family: $font-secondary;
+                
+            }
+
+            label {
+                font-size: 0.9rem;
+                font-family: $font-secondary;
+                margin-bottom: 0.5rem;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.5rem;
+                font-family: $font-secondary;
+                border-radius: 0.5rem;
+                border: solid 1px #1c1c1c;
+                margin-bottom: 0.3rem;
+            }
+
+            button {
+                width: 100%;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+                font-family: $font-secondary;
+                border-radius: 0.5rem;
+                border: solid 1px #1c1c1c;
+                background-color: #1c1c1c;
+                color: #ececec;
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+        }
+
+        .display-terms {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: $font-secondary;
+            font-size: 0.8rem;
+            width: 100%;
+
+            .error{
+                color: red;
+                font-size: 0.6rem;
+                font-family: $font-secondary;
+                
+            }
+
+            a {
+                text-decoration: none;
+                color: #1c1c1c;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+
+
+            .term-label {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 0.2rem;
+                font-family: $font-secondary;
+                padding: 0.5rem;
+
+                a {
+                    text-decoration: none;
+                    color: #1c1c1c;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+
+            }
+
+
+        }
+    }
+}

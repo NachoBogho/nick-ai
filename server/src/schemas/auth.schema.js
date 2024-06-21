@@ -12,6 +12,11 @@ export const registerSchema = z.object({
     password: z.string({
         required_error: 'Password is required'
     }).min(6, {}),
+    number: z.number({
+        required_error: 'Number is required'
+    }).min(10, {
+        message: 'Invalid number'
+    })
 })
 
 export const loginSchema = z.object({
