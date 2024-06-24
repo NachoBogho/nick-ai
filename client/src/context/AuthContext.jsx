@@ -1,5 +1,5 @@
-import { createContext, useState, useContext } from 'react'
-import { registerRequest } from '../api/auth';
+import { createContext, useState, useContext } from 'react';
+import { registerRequest, loginRequest } from '../api/auth';
 
 export const authContext = createContext();
 
@@ -9,16 +9,19 @@ export const useAuth = () => {
         throw new Error('useAuth debe estar dentro del proveedor AuthContext');
     }
     return context;
-
-}
+};
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [errors, setErrors] = useState([]);
 
     const signup = async (user) => {
         if (user.password !== user.confirmPassword) {
-            alert("Las contraseñas no coinciden");
+            setErrors(['Las contraseñas no coinciden']);
+            return;
+        } else if (user.password.length !== 6) {
+            setErrors(['La contraseña debe tener 6 caracteres']);
             return;
         }
 
@@ -29,20 +32,29 @@ export const AuthProvider = ({ children }) => {
             console.log('Registro exitoso:', res.data);
             setUser(res.data);
             setIsAuthenticated(true);
-
+            setErrors([]); // Limpiar errores después de un registro exitoso
         } catch (error) {
-            if (error.response) {
-                console.error('Error en la respuesta:', error.response.data);
-                alert(`Error: ${error.response.data.error[0] || 'Algo salió mal'}`);
-            } else {
-                console.error('Error:', error.message);
-                alert('Error de red o del servidor');
-            }
+            const errorMessages = error.response?.data || ['Error en el registro'];
+            setErrors(Array.isArray(errorMessages) ? errorMessages : [errorMessages]);
         }
-    }
+    };
+
+    const signin = async (user) => {
+        try {
+            const res = await loginRequest(user);
+            console.log('Inicio de sesión exitoso:', res.data);
+            setUser(res.data);
+            setIsAuthenticated(true);
+            setErrors([]); // Limpiar errores después de un inicio de sesión exitoso
+        } catch (error) {
+            const errorMessages = error.response?.data?.message || ['Error en el inicio de sesión'];
+            setErrors([errorMessages]);
+        }
+    };
+
     return (
-        <authContext.Provider value={{ signup, user, isAuthenticated}}>
+        <authContext.Provider value={{ signup, signin, user, isAuthenticated, errors }}>
             {children}
         </authContext.Provider>
-    )
-}
+    );
+};

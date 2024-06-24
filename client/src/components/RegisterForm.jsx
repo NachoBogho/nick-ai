@@ -6,23 +6,26 @@ import '../sass/component-styles/register-form.scss';
 
 const RegisterForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { signup, isAuthenticated } = useAuth();
+    const { signup, isAuthenticated, errors: registerErrors } = useAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
         if (isAuthenticated) {
             navigate('/');
         }
-    }, [isAuthenticated])
+    }, [isAuthenticated, navigate]);
 
     const onSubmit = async (values) => {
-        signup(values);
+        await signup(values);
     };
 
     return (
         <div className='form-display'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <h2>Registro</h2>
+                {registerErrors.length > 0 && registerErrors.map((error, i) => (
+                    <p key={i} className='error'>{error}</p>
+                ))}
                 <div className='form-sec'>
                     <label htmlFor="username">Nombre de Usuario:</label>
                     <input
@@ -31,7 +34,7 @@ const RegisterForm = () => {
                         id="username"
                         {...register('username', { required: "El nombre de usuario es obligatorio" })}
                     />
-                    {errors.username && <p className='error' >{errors.username.message}</p>}
+                    {errors.username && <p className='error'>{errors.username.message}</p>}
                 </div>
                 <div className='form-sec'>
                     <label htmlFor="email">Email:</label>
@@ -50,7 +53,7 @@ const RegisterForm = () => {
                         placeholder="Escribe tu contraseña"
                         type="password"
                         id="password"
-                        autoComplete="password"
+                        autoComplete="new-password"
                         {...register('password', { required: "La contraseña es obligatoria" })}
                     />
                     {errors.password && <p className='error'>{errors.password.message}</p>}
@@ -78,14 +81,13 @@ const RegisterForm = () => {
                 </div>
                 <div className='display-terms'>
                     <label className='term-label'>
-                        <input className='terms-checkbox' type="checkbox" {...register('terms', { required: "Debe aceptar los términos y condiciones" })} /> Acepto los <Link to="/terms-and-conditions" target="_blank"> Términos & Condiciones</Link>
+                        <input className='terms-checkbox' type="checkbox" {...register('terms', { required: "Debe aceptar los términos y condiciones" })} /> Acepto los <Link to="/terms-and-conditions" target="_blank">Términos & Condiciones</Link>
                     </label>
                     {errors.terms && <p className='error'>{errors.terms.message}</p>}
                 </div>
                 <div className='form-sec'>
                     <button type="submit">Registrarse</button>
                 </div>
-
             </form>
         </div>
     );

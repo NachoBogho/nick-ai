@@ -1,13 +1,17 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext';
 import '../sass/component-styles/register-form.scss';
 
 const LoginForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const {signin} = useAuth();
+
     const onSubmit = handleSubmit((data) => {
-        console.log(data);
-        // Aquí iría el código para enviar los datos a la API   
+        signin(data);
+
     });
 
   return (

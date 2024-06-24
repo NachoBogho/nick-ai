@@ -6,6 +6,14 @@
     align-items: center;
     justify-content: center;
 
+    .error{
+        color: red;
+        font-size: 0.9rem;
+        font-family: $font-secondary;
+        margin-bottom: 1rem;
+        
+    }
+
     form {
         height: auto;
         display: flex;
@@ -14,7 +22,6 @@
         justify-content: center;
         width: 100%;
         padding: 2rem 3rem 2rem 3rem;
-        background-color: #ececec;
         border-radius: 3rem 3rem 3rem 3rem;
         max-height: 80vh;   
         gap: 1rem;

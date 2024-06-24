@@ -11,14 +11,13 @@ const Register = () => {
       <RegisterForm className='form' />
       <div className='der-display'>
         <h4>¡Estas a un paso de potenciar tu negocio!</h4>
-        <h5>Con tu cuenta de usuario podrás acceder a todas las funcionalidades de la plataforma </h5>
         <div>
         <p>¿Ya tienes una cuenta?</p>
         <Link to="/iniciar-sesion">Inicia sesión</Link>
 
         </div>
 
-      </div>
+      </div> 
       </div>
   
     </div>
