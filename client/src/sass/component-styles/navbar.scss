@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.nav-display{
+.nav-display {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,19 +11,20 @@
     position: fixed;
     padding-top: 5px;
     padding-bottom: 5px;
-    
-    img{
+
+    img {
         width: 60px;
         height: 60px;
         margin-left: 30px;
     }
-    .nav-wrapper{
+
+    .nav-wrapper {
         display: flex;
         justify-content: end;
         flex-direction: row;
         width: 50%;
 
-        .display-list{
+        .display-list {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -31,20 +32,92 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            
-            li{
-                a{
+
+            li {
+                position: relative;
+
+                a {
                     text-decoration: none;
                     color: $color-font;
                     font-family: $font-secondary;
                     font-size: 1rem;
                     padding-bottom: 1px;
-                    &:hover{
+
+                    &:hover {
                         border-bottom: solid 1px $color-primary;
-                        
+                    }
+                }
+
+                .user-button {
+                    cursor: pointer;
+                    color: $color-font;
+                    font-family: $font-secondary;
+                    font-size: 1rem;
+
+                    &:hover {
+                        border-bottom: solid 1px $color-primary;
+                    }
+                }
+
+                .dropdown-menu {
+                    position: absolute;
+                    top: 100%;
+                    right: 3%;
+                    width: 120px;
+                    background: #ffffff;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin-top: 1rem;
+                    z-index: 1000;
+                    opacity: 0;
+                    transform: translateY(-20px);
+                    animation: cascade 0.5s forwards;
+
+                    li {
+                        padding: 0.5rem;
+                        a {
+                            text-decoration: none;
+                            color: inherit;
+                            display: block;
+                            width: 100%;
+                            text-align: left;
+                            font-size: 0.9rem;
+                            display: flex;
+                            justify-content: start;
+                            gap: 0.5rem;
+                            align-items: center;
+                            padding-bottom: 0.5rem;
+
+                            .display-img{
+
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                .img-navbar {
+                                    width: 0.9rem;
+                                    height: 0.9rem;
+                                    padding-right: 50%;
+
+                                }
+                            }
+
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes cascade {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

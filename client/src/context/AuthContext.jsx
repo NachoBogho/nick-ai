@@ -1,7 +1,9 @@
-import { createContext, useState, useContext } from 'react';
-import { registerRequest, loginRequest } from '../api/auth';
+import { createContext, useState, useContext, useEffect } from 'react';
+import { registerRequest, loginRequest, verifyToken } from '../api/auth';
+import Cookies from 'js-cookie'
 
 export const authContext = createContext();
+
 
 export const useAuth = () => {
     const context = useContext(authContext);
@@ -15,6 +17,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [errors, setErrors] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const signup = async (user) => {
         if (user.password !== user.confirmPassword) {
@@ -52,8 +55,51 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    useEffect(() => {
+        if (errors > 0) {
+            const timer = setTimeout(() => {
+                setErrors([]);
+            }, 5000);
+
+            return () => clearTimeout(timer);
+        }
+    }, []); // Add a comma here
+
+    useEffect(() => {
+        async function checkLogin() {
+            const cookie = Cookies.get();
+
+           if(!cookie.token){
+                setIsAuthenticated(false);
+                setLoading(false);
+                return setUser(null)
+           }
+           try {
+            const res = await verifyToken(cookie.token);
+            if(!res.data){
+                setIsAuthenticated(false);
+                setLoading(false);
+            }
+            setUser(res.data);
+            setIsAuthenticated(true);
+            setLoading(false);
+           } catch (error) {
+            setIsAuthenticated(false);
+            setLoading(false);
+            setUser(null);            
+           }
+        }
+        checkLogin();
+    }, []);
+    
+    const logout = () => {
+        Cookies.remove('token');
+        setIsAuthenticated(false);
+        setUser(null);
+      };
+
     return (
-        <authContext.Provider value={{ signup, signin, user, isAuthenticated, errors }}>
+        <authContext.Provider value={{ signup, signin, logout, user, isAuthenticated, errors, loading}}>
             {children}
         </authContext.Provider>
     );

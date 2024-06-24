@@ -6,28 +6,28 @@ import Register from './pages/Register.jsx';
 import Login from './pages/Login.jsx';
 import TerminosCondiciones from './pages/TerminosCondiciones.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import ProfilePage from './pages/ProfilePage.jsx';
+import ProtectedRoute from './ProtectedRoute.jsx';
 
 const App = () => {
   return (
-
-    <>
-      <AuthProvider>
-        <BrowserRouter>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/registro" element={<Register />} />
-            <Route path="/iniciar-sesion" element={<Login />} />
-            <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </AuthProvider>
-    </>
-
-
+    <AuthProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/registro" element={<Register />} />
+          <Route path="/iniciar-sesion" element={<Login />} />
+          <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/perfil" element={<ProfilePage />} />
+          </Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </AuthProvider>
   );
 };
 
