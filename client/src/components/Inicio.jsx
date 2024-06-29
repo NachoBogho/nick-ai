@@ -15,7 +15,7 @@ const Inicio = () => {
                     </div>
                 </div>
 
-                <img src='/img/chat-example.png' alt='Ejemplo de chat de Nex AI' />
+                <img src='/img/chat-index.png' alt='Ejemplo de chat de Nex AI' />
             </div>
 
         </section>

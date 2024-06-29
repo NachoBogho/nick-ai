@@ -7,22 +7,29 @@ const Chat = () => {
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
+    const messagesContainerRef = useRef(null);
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        if (messagesContainerRef.current) {
+            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+        }
     };
 
     useEffect(() => {
         scrollToBottom();
-    }, [messages]);
+    }, [messages, isTyping]);
 
     const sendMessage = async () => {
         if (!input.trim()) return;
 
         const newMessage = { sender: 'user', text: input };
-        setMessages([...messages, newMessage]);
+        setMessages((prevMessages) => [...prevMessages, newMessage]);
         setInput('');
         setIsTyping(true);
+
+        setTimeout(() => {
+            scrollToBottom();
+        }, 0);
 
         try {
             const response = await axios.post('http://localhost:5005/webhooks/rest/webhook', { message: input });
@@ -32,12 +39,18 @@ const Chat = () => {
             botResponse.forEach((msg) => {
                 setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: msg.text }]);
             });
+
+            setTimeout(() => {
+                scrollToBottom();
+            }, 0);
         } catch (error) {
             console.error('Error sending message:', error);
         } finally {
             setIsTyping(false);
         }
     };
+
+
 
     return (
         <div className="chat-container">

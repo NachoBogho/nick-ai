@@ -83,6 +83,7 @@
         overflow-y: auto;
         margin-bottom: 10px;
         margin-top: 1rem;
+        overflow-y: auto;
 
         .message {
             display: flex;
@@ -91,6 +92,7 @@
             border-radius: 0.8em;
             position: relative;
             max-width: 60%;
+            
 
             &.user-message {
                 align-self: flex-end; // Alinea a la derecha
@@ -222,3 +224,4 @@
         }
     }
 }
+

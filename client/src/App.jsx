@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import ProfilePage from './pages/ProfilePage.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
+import CrmPage from './pages/CrmPage.jsx';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <NavBar />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path='/info-crm' element={<CrmPage/>}/>
           <Route path="/registro" element={<Register />} />
           <Route path="/iniciar-sesion" element={<Login />} />
           <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />

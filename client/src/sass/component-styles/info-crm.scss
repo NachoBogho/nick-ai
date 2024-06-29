@@ -1,0 +1,66 @@
+@import "../variables.scss";
+
+.crm {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    .container {
+        background-color: #ffffff;
+        padding: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items:start;
+            justify-content: center;
+            width: 100%;
+            gap: 1rem;
+            margin-top: 8.5rem;
+            
+
+            h1 {
+                font-family: $font-primary;
+                font-size: 2.5em;
+                color: #1c1c1c;
+                font-weight: 700;
+                width: 90%;
+
+            }
+
+            p {
+                font-size: 1rem;
+                font-family: $font-secondary;
+                color: #1c1c1c;
+                margin-bottom: 20px;
+                width: 90%;
+            }
+
+            .trial-button {
+                display: inline-block;
+                padding: 15px 30px;
+                font-family: $font-secondary;
+                font-size: 1em;
+                color: #ffffff;
+                background-color: #000000;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-bottom: 0.4rem;
+
+                &:hover {
+                    background-color: #333333;
+                }
+            }
+        }
+
+       
+    }
+}

@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext.jsx';
 import '../sass/component-styles/register-form.scss';
 
 const RegisterForm = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, setValue, formState: { errors } } = useForm();
     const { signup, isAuthenticated, errors: registerErrors } = useAuth();
     const navigate = useNavigate();
 
@@ -15,8 +15,19 @@ const RegisterForm = () => {
         }
     }, [isAuthenticated, navigate]);
 
+    useEffect(() => {
+        const storedEmail = localStorage.getItem('email');
+        if (storedEmail) {
+            setValue('email', storedEmail);
+        }
+    }, [setValue]);
+
     const onSubmit = async (values) => {
         await signup(values);
+    };
+
+    const handleEmailChange = (e) => {
+        localStorage.setItem('email', e.target.value);
     };
 
     return (
@@ -44,6 +55,7 @@ const RegisterForm = () => {
                         id="email"
                         autoComplete="new-email"
                         {...register('email', { required: "El correo electrónico es obligatorio" })}
+                        onChange={handleEmailChange}
                     />
                     {errors.email && <p className='error'>{errors.email.message}</p>}
                 </div>

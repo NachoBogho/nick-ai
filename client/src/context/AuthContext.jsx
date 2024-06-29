@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
             console.log('Registro exitoso:', res.data);
             setUser(res.data);
             setIsAuthenticated(true);
-            setErrors([]); // Limpiar errores después de un registro exitoso
+            setErrors([]); 
         } catch (error) {
             const errorMessages = error.response?.data || ['Error en el registro'];
             setErrors(Array.isArray(errorMessages) ? errorMessages : [errorMessages]);
@@ -63,7 +63,7 @@ export const AuthProvider = ({ children }) => {
 
             return () => clearTimeout(timer);
         }
-    }, []); // Add a comma here
+    }, []);
 
     useEffect(() => {
         async function checkLogin() {

@@ -6,17 +6,27 @@ import { useAuth } from '../context/AuthContext';
 const NavBar = () => {
   const { isAuthenticated, user, logout } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <nav className='nav-display'>
       <Link to="/" ><img src="/img/nex-ai-logo.png" alt="Nex AI Logo" /></Link>
       <div className="nav-wrapper">
-        <ul className='display-list'>
-          <li className="item-list"><Link to="/">Novedades</Link></li>
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </div>
+        <ul className={`display-list ${menuOpen ? 'open' : ''}`}>
+          <li className="item-list"><Link to="/info-crm">CRM</Link></li>
           <li className="item-list"><Link to="/">Demos</Link></li>
           <li className="item-list"><Link to="/">Contacto</Link></li>
           {isAuthenticated ? (
