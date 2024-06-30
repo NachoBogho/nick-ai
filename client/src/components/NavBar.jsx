@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <nav className='nav-display'>
-      <Link to="/" ><img src="/img/nex-ai-logo.png" alt="Nex AI Logo" /></Link>
+      <Link to="/" ><img src="/img/nick-logo.png" alt="Nex AI Logo" /></Link>
       <div className="nav-wrapper">
         <div className="hamburger-menu" onClick={toggleMenu}>
           <span className="hamburger-line"></span>

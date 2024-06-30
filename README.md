@@ -13,3 +13,9 @@ Nick AI es un chatbot que utiliza tecnologías de vanguardia como Rasa, BERT, DI
 - **Seguridad:** Implementamos medidas de seguridad robustas como encriptación de datos y autenticación de usuarios para proteger la privacidad de los datos.
 - **Personalización:** Ofrecemos una amplia gama de opciones de personalización, desde la apariencia y el tono de conversación hasta la integración con sistemas específicos.
 - **Análisis de Rendimiento:** Proporcionamos informes detallados sobre el rendimiento del chatbot, incluyendo métricas clave como la cantidad de interacciones, la tasa de éxito en la resolución de consultas, tiempos de respuesta y feedback de los usuarios.
+
+### Activar el chatbot
+
+- **Activar el ENV** source ./venv/bin/activate
+- **Activar las acciones** rasa run actions
+_ **Encender el BOT** rasa run --cors "*" --enable-api

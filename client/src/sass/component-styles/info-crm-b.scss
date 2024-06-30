@@ -1,0 +1,47 @@
+@import "../variables.scss";
+
+.display-info-crm{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 1rem;  
+    justify-content: center;
+    align-items: center;
+    background-color: #ececec;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+
+    .display-title-crm{
+        width: 32%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        img{
+            width: 3rem;
+            height: 3rem;
+            object-fit: cover;
+        }
+
+        h3{
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $color-primary;
+            margin: 0;
+            padding: 1rem;
+            font-family: $font-primary;
+        }
+        p{
+            font-size: 1rem;
+            font-weight: 400;
+            color: $color-primary;
+            margin: 0;
+            padding: 1rem;
+            font-family: $font-primary;
+        }
+        
+    }
+}
