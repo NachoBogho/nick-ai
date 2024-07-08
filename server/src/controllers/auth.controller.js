@@ -5,7 +5,9 @@ import jwt from 'jsonwebtoken';
 import { TOKEN_SECRET } from '../config.js';
 
 
+
 export const register = async (req, res) => {
+    
     const { username, email, password, number } = req.body;
 
     try {
@@ -80,21 +82,43 @@ export const logout = (req, res) => {
     return res.sendStatus(200);
 };
 
-export const profile = async (req, res) => {
-    const userFound = await User.findById(req.user.id)
-    if (!userFound) return res.status(400).json({ message: 'Usuario no encontrado' })
 
-    return res.json({
-        id: userFound._id,
-        username: userFound.username,
-        email: userFound.email,
-        createdAt: userFound.createdAt,
-        updatedAt: userFound.updatedAt
-    });
+export const updateProfile = async (req, res) => {
+    const { companyName, description, location } = req.body;
+    const profileImage = req.file ? `data:${req.file.mimetype};base64,${req.file.buffer.toString('base64')}` : null;
 
+    try {
+        console.log('Datos recibidos:', { companyName, description, location, profileImage });
+
+        const user = await User.findById(req.user.id);
+        if (!user) return res.status(404).json({ message: 'Usuario no encontrado' });
+
+        user.companyName = companyName || user.companyName;
+        user.description = description || user.description;
+        user.location = location || user.location;
+        if (profileImage) {
+            user.profileImage = profileImage;
+            
+        }
+
+        await user.save();
+
+        res.json({
+            id: user._id,
+            username: user.username,
+            email: user.email,
+            companyName: user.companyName,
+            description: user.description,
+            location: user.location,
+            profileImage: user.profileImage,
+            createdAt: user.createdAt,
+            updatedAt: user.updatedAt
+        });
+    } catch (error) {
+        console.error('Error actualizando el perfil:', error);
+        res.status(500).json({ message: 'Error del servidor' });
+    }
 };
-
-
 
 export const verifyToken = async (req, res) => {
    const { token } = req.cookies

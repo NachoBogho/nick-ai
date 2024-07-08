@@ -1,9 +1,9 @@
+import axios from 'axios';
 import { createContext, useState, useContext, useEffect } from 'react';
 import { registerRequest, loginRequest, verifyToken } from '../api/auth';
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
 
 export const authContext = createContext();
-
 
 export const useAuth = () => {
     const context = useContext(authContext);
@@ -18,6 +18,22 @@ export const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [errors, setErrors] = useState([]);
     const [loading, setLoading] = useState(true);
+
+
+
+    const updateUser = async (formData) => {
+        try {
+            const response = await axios.post('http://localhost:3000/api/profile', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+                withCredentials: true,
+            });
+            setUser(response.data); // Actualiza el estado del usuario con los datos recibidos
+        } catch (error) {
+            console.error("Error actualizando el perfil del usuario", error);
+        }
+    };
 
     const signup = async (user) => {
         if (user.password !== user.confirmPassword) {
@@ -35,7 +51,7 @@ export const AuthProvider = ({ children }) => {
             console.log('Registro exitoso:', res.data);
             setUser(res.data);
             setIsAuthenticated(true);
-            setErrors([]); 
+            setErrors([]);
         } catch (error) {
             const errorMessages = error.response?.data || ['Error en el registro'];
             setErrors(Array.isArray(errorMessages) ? errorMessages : [errorMessages]);
@@ -48,7 +64,7 @@ export const AuthProvider = ({ children }) => {
             console.log('Inicio de sesión exitoso:', res.data);
             setUser(res.data);
             setIsAuthenticated(true);
-            setErrors([]); // Limpiar errores después de un inicio de sesión exitoso
+            setErrors([]);
         } catch (error) {
             const errorMessages = error.response?.data?.message || ['Error en el inicio de sesión'];
             setErrors([errorMessages]);
@@ -56,50 +72,51 @@ export const AuthProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        if (errors > 0) {
+        if (errors.length > 0) {
             const timer = setTimeout(() => {
                 setErrors([]);
             }, 5000);
 
             return () => clearTimeout(timer);
         }
-    }, []);
+    }, [errors]);
 
     useEffect(() => {
         async function checkLogin() {
-            const cookie = Cookies.get();
+            const token = Cookies.get('token');
 
-           if(!cookie.token){
+            if (!token) {
                 setIsAuthenticated(false);
                 setLoading(false);
-                return setUser(null)
-           }
-           try {
-            const res = await verifyToken(cookie.token);
-            if(!res.data){
-                setIsAuthenticated(false);
-                setLoading(false);
+                return setUser(null);
             }
-            setUser(res.data);
-            setIsAuthenticated(true);
-            setLoading(false);
-           } catch (error) {
-            setIsAuthenticated(false);
-            setLoading(false);
-            setUser(null);            
-           }
+            try {
+                const res = await verifyToken(token);
+                if (!res.data) {
+                    setIsAuthenticated(false);
+                    setLoading(false);
+                } else {
+                    setUser(res.data);
+                    setIsAuthenticated(true);
+                    setLoading(false);
+                }
+            } catch (error) {
+                setIsAuthenticated(false);
+                setLoading(false);
+                setUser(null);
+            }
         }
         checkLogin();
     }, []);
-    
+
     const logout = () => {
         Cookies.remove('token');
         setIsAuthenticated(false);
         setUser(null);
-      };
+    };
 
     return (
-        <authContext.Provider value={{ signup, signin, logout, user, isAuthenticated, errors, loading}}>
+        <authContext.Provider value={{ signup, signin, updateUser, logout, user, isAuthenticated, errors, loading }}>
             {children}
         </authContext.Provider>
     );
